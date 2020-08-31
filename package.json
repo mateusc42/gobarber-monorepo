@@ -1,0 +1,33 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "dev:api": "cd packages/server && yarn dev:server",
+    "dev:web": "cd packages/web && yarn start",
+    "lint:web": "cd packages/web && yarn eslint --ext .ts,.tsx --fix ."
+  },
+  "main": "index.js",
+  "author": "Luis Otávio <luis.otavio2425@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@monorepo/eslint-config": "*",
+    "@types/styled-components": "^5.1.1",
+    "@types/yup": "^0.29.3",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@unform/core": "^2.1.3",
+    "axios": "^0.19.2",
+    "date-fns": "^2.15.0",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "uuidv4": "^6.2.0",
+    "yup": "^0.29.2"
+  }
+}
